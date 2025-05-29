@@ -1,0 +1,6 @@
+# Convert to list, modify, then convert back
+colors_list = list(colors)
+colors_list[1] = 'emerald'
+colors_list.append('violet')
+updated_colors = tuple(colors_list)
+print(updated_colors)  # ('red', 'emerald', 'blue', 'yellow', 'orange', 'violet')
