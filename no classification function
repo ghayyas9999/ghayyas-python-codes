@@ -1,0 +1,43 @@
+def classify_numbers(number_list):
+    """
+    Classifies numbers in a list as positive, zero, or negative
+    and returns counts of each category.
+    
+    Parameters:
+        number_list (list): List of numbers to classify
+        
+    Returns:
+        dict: Counts of positive, zero, and negative numbers
+    """
+    counts = {
+        'positive': 0,
+        'zero': 0,
+        'negative': 0
+    }
+    
+    print("\nClassification results:")
+    for num in number_list:
+        if num > 0:
+            print(f"{num} is positive")
+            counts['positive'] += 1
+        elif num == 0:
+            print(f"{num} is zero")
+            counts['zero'] += 1
+        else:
+            print(f"{num} is negative")
+            counts['negative'] += 1
+    
+    return counts
+
+# Test cases
+numbers1 = [5, -3, 0, 12, -8, 0, 1, -1]
+result1 = classify_numbers(numbers1)
+print("\nCounts:", result1)
+
+numbers2 = [0, 0, 0, -2, -2, 3]
+result2 = classify_numbers(numbers2)
+print("\nCounts:", result2)
+
+empty_list = []
+result3 = classify_numbers(empty_list)
+print("\nCounts:", result3)
