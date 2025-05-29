@@ -1,0 +1,13 @@
+# For loop
+for color in colors:
+    print(color.upper())
+
+# While loop
+i = 0
+while i < len(colors):
+    print(f"Color {i}: {colors[i]}")
+    i += 1
+
+# Enumerate for index and value
+for index, color in enumerate(colors):
+    print(f"Position {index} has {color}")
