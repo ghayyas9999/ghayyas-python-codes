@@ -1,0 +1,32 @@
+def greet(name):
+    """Greets the user by name"""
+    return f"Hello, {name}!"
+
+def calculate_area(length, width):
+    """Calculates area of a rectangle"""
+    return length * width
+
+PI = 3.14159
+
+# Importing the entire module
+import mymodule
+
+print(mymodule.greet("Alice"))  # Hello, Alice!
+print(mymodule.calculate_area(5, 3))  # 15
+print(mymodule.PI)  # 3.14159
+
+# Import specific items
+from mymodule import greet, PI
+
+print(greet("Bob"))  # No need for module prefix
+print(PI * 2)  # Direct access
+
+# Import with alias
+import mymodule as mm
+
+print(mm.greet("Charlie"))
+
+# Import all names (not recommended)
+from mymodule import *
+
+print(calculate_area(4, 6)
