@@ -1,0 +1,36 @@
+def function_name(parameters):
+    """docstring explaining the function"""
+    # Function body
+    return value  # Optional
+
+
+### Example function check_even_odd:
+
+python
+def check_even_odd(number):
+    """
+    Checks if a number is even or odd and prints the result.
+    
+    Parameters:
+        number (int): The number to check
+        
+    Returns:
+        None
+    """
+    try:
+        # Convert to int in case string is passed
+        num = int(number)
+        
+        # Check if number is even or odd
+        if num % 2 == 0:
+            print(f"The number {num} is even")
+        else:
+            print(f"The number {num} is odd")
+    except ValueError:
+        print("Error: Please enter a valid number")
+
+# Test cases
+check_even_odd(4)      # The number 4 is even
+check_even_odd(7)      # The number 7 is odd
+check_even_odd("12")   # The number 12 is even
+check_even_odd("abc")  # Error: Please enter a valid number
