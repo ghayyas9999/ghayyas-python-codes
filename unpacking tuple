@@ -1,0 +1,17 @@
+# Basic unpacking
+r, g, b, y, o = colors
+print(f"Red: {r}, Green: {g}, Blue: {b}")
+
+# Extended unpacking
+first, *middle, last = colors
+print(f"First: {first}, Middle: {middle}, Last: {last}")  # Middle becomes list
+
+# Ignoring values with _
+first, _, third, *_ = colors
+print(f"First: {first}, Third: {third}")
+
+# Swapping variables
+a = 5
+b = 10
+a, b = b, a  # Tuple packing and unpacking
+print(f"a: {a}, b: {b}")  # a: 10, b: 5
