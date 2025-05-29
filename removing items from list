@@ -1,0 +1,22 @@
+# remove() - by value
+fruits.remove('banana')
+print(fruits)  # Removes first occurrence of banana
+
+# pop() - by index (returns removed item)
+removed = fruits.pop(2)
+print(f"Removed {removed}, list now: {fruits}")
+
+# del statement
+del fruits[0]
+print(fruits)  # Deletes item at index 0
+
+# clear() - empty the list
+fruits_copy = fruits.copy()
+fruits_copy.clear()
+print(fruits_copy)  # []
+
+# Remove all occurrences of a value
+numbers = [1, 2, 3, 2, 4, 2, 5]
+while 2 in numbers:
+    numbers.remove(2)
+print(numbers)  # [1, 3, 4, 5]
