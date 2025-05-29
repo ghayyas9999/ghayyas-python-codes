@@ -1,0 +1,26 @@
+# Shallow copy methods
+original = [1, 2, [3, 4]]
+
+# Method 1: copy() method
+copy1 = original.copy()
+
+# Method 2: slicing
+copy2 = original[:]
+
+# Method 3: list() constructor
+copy3 = list(original)
+
+# All create new list objects but share references to nested objects
+original[0] = 99
+original[2][0] = 88
+print(original)  # [99, 2, [88, 4]]
+print(copy1)     # [1, 2, [88, 4]] - nested list affected
+print(copy2)     # [1, 2, [88, 4]]
+print(copy3)     # [1, 2, [88, 4]]
+
+# Deep copy (for nested structures)
+import copy
+deep_copy = copy.deepcopy(original)
+original[2][1] = 77
+print(original)   # [99, 2, [88, 77]]
+print(deep_copy)  # [99, 2, [88, 4]] - unaffected
