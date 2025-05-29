@@ -1,0 +1,54 @@
+# Creating sets
+fruits = {'apple', 'banana', 'cherry', 'apple'}  # Duplicates removed
+print(fruits)  # {'banana', 'cherry', 'apple'}
+
+numbers = set([1, 2, 3, 2, 1])  # From list
+print(numbers)  # {1, 2, 3}
+
+# Adding elements
+fruits.add('date')
+print(fruits)  # Adds 'date'
+
+fruits.update(['elderberry', 'fig'])  # Add multiple
+print(fruits)
+
+# Removing elements
+fruits.remove('banana')  # Raises KeyError if not found
+print(fruits)
+
+fruits.discard('mango')  # No error if not found
+
+popped = fruits.pop()  # Removes and returns arbitrary element
+print(f"Removed {popped}")
+
+fruits.clear()  # Empty the set
+print(fruits)  # set()
+
+# Set operations
+a = {1, 2, 3, 4, 5}
+b = {4, 5, 6, 7, 8}
+
+# Union
+print(a | b)  # {1, 2, 3, 4, 5, 6, 7, 8}
+print(a.union(b))  # Same
+
+# Intersection
+print(a & b)  # {4, 5}
+print(a.intersection(b))  # Same
+
+# Difference
+print(a - b)  # {1, 2, 3}
+print(a.difference(b))  # Same
+
+# Symmetric difference (elements in either but not both)
+print(a ^ b)  # {1, 2, 3, 6, 7, 8}
+print(a.symmetric_difference(b))  # Same
+
+# Subset/superset checks
+print({1, 2}.issubset(a))  # True
+print(a.issuperset({1, 2}))  # True
+print(a.isdisjoint({6, 7}))  # False (some elements in common)
+
+# Frozenset - immutable version
+immutable_set = frozenset([1, 2, 3])
+# immutable_set.add(4)  # Would raise AttributeErro
