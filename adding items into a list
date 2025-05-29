@@ -1,0 +1,12 @@
+fruits.append('elderberry')
+print(fruits)  # ['apple', 'banana', 'cherry', 'date', 'elderberry']
+# extend() - add multiple items
+fruits.extend(['fig', 'grape'])
+print(fruits)  # Adds fig and grape at end
+# insert() - add at specific position
+fruits.insert(1, 'apricot')
+print(fruits)  # Inserts apricot at position 1
+# + operator to concatenate
+more_fruits = ['kiwi', 'lemon']
+all_fruits = fruits + more_fruits
+print(all_fruits)
