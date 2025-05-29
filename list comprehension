@@ -1,0 +1,22 @@
+# Basic comprehension
+squares = [x**2 for x in range(10)]
+print(squares)  # [0, 1, 4, 9, 16, 25, 36, 49, 64, 81]
+
+# With condition
+evens = [x for x in range(20) if x % 2 == 0]
+print(evens)  # [0, 2, 4, 6, 8, 10, 12, 14, 16, 18]
+
+# Nested comprehension
+matrix = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+flattened = [num for row in matrix for num in row]
+print(flattened)  # [1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+# Dictionary comprehension from list
+fruits = ['apple', 'banana', 'cherry']
+fruit_lengths = {fruit: len(fruit) for fruit in fruits}
+print(fruit_lengths)  # {'apple': 5, 'banana': 6, 'cherry': 6}
+
+# Conditional expression in comprehension
+numbers = [1, 2, 3, 4, 5]
+labels = ["even" if x % 2 == 0 else "odd" for x in numbers]
+print(labels)  # ['odd', 'even', 'odd', 'even', 'odd'] 
