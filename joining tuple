@@ -1,0 +1,8 @@
+# Concatenation with +
+more_colors = ('purple', 'pink')
+all_colors = colors + more_colors
+print(all_colors)  # ('red', 'green', 'blue', 'yellow', 'orange', 'purple', 'pink')
+
+# Repetition with *
+repeated = colors * 2
+print(repeated)  # Duplicates the tuple
