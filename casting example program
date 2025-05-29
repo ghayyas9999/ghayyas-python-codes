@@ -1,0 +1,23 @@
+# Initial variables of different types
+num_str = "123"
+num_int = 456
+num_float = 78.9
+
+# Casting examples
+str_to_int = int(num_str)  # Convert string to integer
+int_to_float = float(num_int)  # Convert integer to float
+float_to_str = str(num_float)  # Convert float to string
+
+print(f"Original string '{num_str}' converted to integer: {str_to_int}")
+print(f"Original integer {num_int} converted to float: {int_to_float}")
+print(f"Original float {num_float} converted to string: '{float_to_str}'")
+
+# Performing operations after casting
+result = str_to_int + num_int
+print(f"Sum of converted values: {result}")
+
+# The type() function
+print("\nType checking with type() function:")
+print(f"Type of num_str: {type(num_str)}")
+print(f"Type of str_to_int: {type(str_to_int)}")
+print(f"Type of float_to_str: {type(float_to_str)}")
