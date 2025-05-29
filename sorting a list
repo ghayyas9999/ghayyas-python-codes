@@ -1,0 +1,18 @@
+# sort() - in place
+numbers = [3, 1, 4, 1, 5, 9, 2]
+numbers.sort()
+print(numbers)  # [1, 1, 2, 3, 4, 5, 9]
+
+# sorted() - returns new sorted list
+words = ['banana', 'apple', 'date', 'cherry']
+sorted_words = sorted(words)
+print(sorted_words)  # ['apple', 'banana', 'cherry', 'date']
+print(words)         # Original unchanged
+
+# Custom sorting
+words.sort(key=len)  # Sort by length
+print(words)  # ['date', 'apple', 'banana', 'cherry']
+
+# Reverse sort
+numbers.sort(reverse=True)
+print(numbers)  # [9, 5, 4, 3, 2, 1, 1]
